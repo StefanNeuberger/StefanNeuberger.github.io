@@ -1,0 +1,21 @@
+svg {
+  height: 30%;
+  width: 30%;
+}
+
+.fill {
+  animation-name: fillAction;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.2, 0.3, 0.4, 0.5);
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fillAction {
+  0% {
+    transform: translate(0px, 20px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
