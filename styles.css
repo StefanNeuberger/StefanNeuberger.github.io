@@ -1,21 +1,75 @@
-svg {
-  height: 30%;
-  width: 30%;
+body {
+  height: 100%;
+  padding: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+  overflow-y: hidden;
 }
 
-.fill {
-  animation-name: fillAction;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0.2, 0.3, 0.4, 0.5);
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
+button {
+  margin-bottom: 50px;
+  position: absolute;
+  top: 1000px;
+  width: 100px;
+  height: 100px;
 }
 
-@keyframes fillAction {
+#circle {
+  margin-right: 5px;
+}
+
+#flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+}
+
+text {
+  font-family: "Arial-BoldMT";
+  fill: #ffffff;
+  font-size: 2px;
+}
+
+.year {
+  font-family: "Arial-BoldMT";
+  fill: #b80718;
+  font-size: 10px;
+}
+
+@keyframes textTransitionOut {
   0% {
-    transform: translate(0px, 20px);
+    opacity: 1;
   }
   100% {
-    transform: translate(0, 0px);
+    opacity: 0;
   }
+}
+
+@keyframes textTransitionIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animateTextOut {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-name: textTransitionOut;
+}
+.animateTextIn {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-name: textTransitionIn;
 }
