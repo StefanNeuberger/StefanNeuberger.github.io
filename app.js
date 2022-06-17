@@ -203,7 +203,7 @@ years.forEach((year, index) => {
 let counter = 0;
 const interval = setInterval(function () {
   if (counter < years.length) {
-    text_year.innerHTML = years[counter];
+    text_year.innerHTML = years[counter + 1] || years[counter];
     identifiers.forEach((identifier) => {
       // ADD CLASSNAME FOR RADIUS ANIMATION
       identifierElements[identifier].circle.classList.add(
