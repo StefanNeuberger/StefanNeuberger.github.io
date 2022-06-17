@@ -172,7 +172,7 @@ const identifiers = Object.keys(dataMap[years[0]]);
 //   });
 // });
 
-// GENERATING THE STYLES
+// GENERATING THE STYLES.
 years.forEach((year, index) => {
   identifiers.forEach((identifier) => {
     const keyframeNameAnimateCircleRadius = `circleTransition${identifier}-${index}`;
